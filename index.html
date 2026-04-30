@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soul Prosperity — Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: #0D0D0D;
+  color: #fff;
+  font-family: 'Lora', Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* ---- ANNOUNCE ---- */
+.announce {
+  background: #FFD600;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* ---- HEADER ---- */
+.header {
+  padding: 40px 24px 30px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+.h-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  color: #FFD600;
+}
+.h-logo span { color: #fff; }
+.h-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* ---- HERO ---- */
+.hero {
+  padding: 64px 24px 48px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(44px, 9vw, 96px);
+  line-height: 0.9;
+  color: #fff;
+}
+.hero h1 .g { color: #FFD600; }
+.hero p {
+  color: #BBB;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 18px auto 0;
+}
+
+/* ---- OFFER GRID ---- */
+.offers {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+.off-h {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  text-align: center;
+  color: #fff;
+  margin-bottom: 36px;
+}
+.off-h .g { color: #FFD600; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 32px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.card:hover {
+  border-color: #FFD600;
+  transform: translateY(-3px);
+}
+.card.featured {
+  border: 2px solid #FFD600;
+  position: relative;
+}
+.card.featured::before {
+  content: 'BEST VALUE';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFD600;
+  color: #000;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  padding: 4px 18px;
+  border-radius: 20px;
+}
+
+.card-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #FFD600;
+  margin-bottom: 6px;
+}
+.card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.card-desc {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.card-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #FFD600;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.card-sub {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 18px;
+}
+.card-buy {
+  display: inline-block;
+  background: #FFD600;
+  color: #000;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+.card-buy:hover { opacity: 0.85; }
+
+/* ---- SKOOL ---- */
+.skool-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+}
+.skool-h {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  text-align: center;
+  color: #fff;
+  margin-bottom: 28px;
+}
+.skool-h .g { color: #FFD600; }
+
+.skool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skool-card {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+}
+.skool-card.highlight {
+  border: 2px solid #FFD600;
+}
+.skool-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+.skool-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  color: #FFD600;
+  margin: 8px 0 4px;
+}
+.skool-sub {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+}
+.skool-desc {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.skool-btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.skool-btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ---- GUARANTEE ---- */
+.guarantee {
+  text-align: center;
+  padding: 40px 24px 60px;
+  border-top: 1px solid #222;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.guarantee .shield { font-size: 40px; }
+.guarantee p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  border-top: 1px solid #111;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.06em;
+}
+footer a { color: #777; text-decoration: none; }
+footer a:hover { color: #FFD600; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  .grid, .skool-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="announce">🔥 New Release — Kingdom-First Publishing</div>
+
+<div class="header">
+  <div class="h-logo">SOUL <span>PROSPERITY</span></div>
+  <div class="h-tag">KINGDOM SYSTEMS · AI AUTOMATION · ETERNAL IMPACT</div>
+</div>
+
+<section class="hero">
+  <h1>Your Story Is an <span class="g">Assignment</span></h1>
+  <p>Write it. Publish it. Launch your Kingdom legacy. Pick the path that fits your season.</p>
+</section>
+
+<!-- PRODUCTS -->
+<div class="offers">
+  <div class="off-h">Choose Your <span class="g">Entry Point</span></div>
+  <div class="grid">
+    <!-- $7 eBook -->
+    <div class="card">
+      <div class="card-tag">Digital</div>
+      <div class="card-title">eBook</div>
+      <div class="card-desc">eBook PDF + Worksheet Pack. Write your book in one weekend with the full blueprint and guided worksheets.</div>
+      <div class="card-price">$7</div>
+      <div class="card-sub">One-time · Instant delivery</div>
+      <a class="card-buy" href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" target="_blank">Buy Now →</a>
+    </div>
+
+    <!-- $17 Audiobook Bundle -->
+    <div class="card">
+      <div class="card-tag">Audio</div>
+      <div class="card-title">Audiobook Bundle</div>
+      <div class="card-desc">Everything in $7 + Full audiobook + Template Pack. Read it. Listen to it. Build from templates.</div>
+      <div class="card-price">$17</div>
+      <div class="card-sub">One-time · eBook + audiobook</div>
+      <a class="card-buy" href="https://buy.stripe.com/7sY6oJdyFaIs3Ou3953Ru0o" target="_blank">Buy Now →</a>
+    </div>
+
+    <!-- $27 Paperback Bundle -->
+    <div class="card">
+      <div class="card-tag">Physical</div>
+      <div class="card-title">Paperback Bundle</div>
+      <div class="card-desc">Everything in $17 + Paperback shipped to your door. Write it, read it, pass it to someone who needs it.</div>
+      <div class="card-price">$27</div>
+      <div class="card-sub">One-time · Includes shipping</div>
+      <a class="card-buy" href="https://buy.stripe.com/28E3cx0LTcQAet8eRN3Ru0p" target="_blank">Buy Now →</a>
+    </div>
+
+    <!-- $67 Online Course Bundle -->
+    <div class="card featured">
+      <div class="card-tag">Best Value</div>
+      <div class="card-title">Course Bundle</div>
+      <div class="card-desc">Everything in $27 + Full video course. Step-by-step walkthroughs, templates, and bonus resources. Go from blank page to published author.</div>
+      <div class="card-price">$67</div>
+      <div class="card-sub">One-time · Everything included</div>
+      <a class="card-buy" href="https://buy.stripe.com/6Uo9AVamt6sc3OudNJ3Ru0q" target="_blank">Buy Now →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SKOOL MEMBERSHIP -->
+<div class="skool-section">
+  <div class="skool-h">Join the <span class="g">Community</span></div>
+  <div class="skool-grid">
+    <div class="skool-card">
+      <div class="skool-name">Free Trial</div>
+      <div class="skool-price">$0</div>
+      <div class="skool-sub">7 days free · then $47/mo</div>
+      <div class="skool-desc">Everything in $67 + Community access. Courses, challenges, live calls, and accountability. Cancel anytime.</div>
+      <a class="skool-btn" href="https://www.skool.com/money-masters-academy-5443" target="_blank">Join Free →</a>
+    </div>
+    <div class="skool-card highlight">
+      <div class="skool-name">Annual Membership</div>
+      <div class="skool-price">$247</div>
+      <div class="skool-sub">$247/year · Save 56% vs monthly</div>
+      <div class="skool-desc">Everything in monthly + Save 56%. Best deal for committed Kingdom builders building their legacy.</div>
+      <a class="skool-btn" href="https://www.skool.com/money-masters-academy-5443" target="_blank">Join Annual →</a>
+    </div>
+    <div class="skool-card">
+      <div class="skool-name">Lifetime Access</div>
+      <div class="skool-price">$497</div>
+      <div class="skool-sub">One-time · Lifetime membership</div>
+      <div class="skool-desc">Everything included. Forever. All future courses, updates, and community access. Invest in your legacy once.</div>
+      <a class="skool-btn" href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" target="_blank">Get Lifetime →</a>
+    </div>
+  </div>
+</div>
+
+<!-- GUARANTEE -->
+<div class="guarantee">
+  <div class="shield">🛡️</div>
+  <p><strong>30-Day Satisfaction Guarantee</strong><br>Not feeling it? Send me an email and I'll refund every dollar. No questions asked. I want this to be a yes from your spirit, not a hustle.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 Terrance Gee · Soul Prosperity</div>
+  <div style="margin-top:4px;"><a href="https://gmoney0112-create.github.io/soul-prosperity">Store</a> · <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n">eBook</a> · Kingdom Systems for Blue-Collar Christian Business Owners</div>
+</footer>
+
+</body>
+</html>
