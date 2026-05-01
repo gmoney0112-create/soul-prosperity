@@ -1,404 +1,1155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID_HERE');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soul Prosperity — Store</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<title>Your Story Is an Assignment — Soul Prosperity</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --black: #080604;
+  --white: #faf8f4;
+  --gold: #c8920a;
+  --gold-light: #e8b030;
+  --gold-pale: #fdf3d9;
+  --charcoal: #1c1a16;
+  --warm-gray: #6b6355;
+  --border: #d4c9b0;
+  --red: #9a1b1b;
+  --green: #2d6a2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
 body {
-  background: #0D0D0D;
-  color: #fff;
-  font-family: 'Lora', Georgia, serif;
+  background: var(--white);
+  color: var(--black);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* ---- ANNOUNCE ---- */
+/* ANNOUNCE */
 .announce {
-  background: #FFD600;
-  padding: 10px 20px;
+  background: var(--gold);
+  color: var(--black);
   text-align: center;
-  font-family: 'Barlow Condensed', Arial, sans-serif;
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #000;
-}
-
-/* ---- HEADER ---- */
-.header {
-  padding: 40px 24px 30px;
-  text-align: center;
-  border-bottom: 1px solid #222;
-}
-.h-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
+  padding: 0.55rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
-  color: #FFD600;
-}
-.h-logo span { color: #fff; }
-.h-tag {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.15em;
-  color: #888;
-  margin-top: 6px;
+  text-transform: uppercase;
 }
 
-/* ---- HERO ---- */
-.hero {
-  padding: 64px 24px 48px;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.hero h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(44px, 9vw, 96px);
-  line-height: 0.9;
-  color: #fff;
-}
-.hero h1 .g { color: #FFD600; }
-.hero p {
-  color: #BBB;
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 18px auto 0;
-}
-
-/* ---- OFFER GRID ---- */
-.offers {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px 80px;
-}
-.off-h {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(32px, 5vw, 48px);
-  text-align: center;
-  color: #fff;
-  margin-bottom: 36px;
-}
-.off-h .g { color: #FFD600; }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #141414;
-  border: 1px solid #222;
-  border-radius: 14px;
-  padding: 32px 24px 28px;
+/* NAV */
+nav {
+  background: var(--black);
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: column;
-  transition: border-color 0.2s, transform 0.15s;
-}
-.card:hover {
-  border-color: #FFD600;
-  transform: translateY(-3px);
-}
-.card.featured {
-  border: 2px solid #FFD600;
-  position: relative;
-}
-.card.featured::before {
-  content: 'BEST VALUE';
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #FFD600;
-  color: #000;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  padding: 4px 18px;
-  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.card-tag {
-  font-family: 'Barlow Condensed', sans-serif;
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
   font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #FFD600;
-  margin-bottom: 6px;
+  font-style: italic;
+  color: var(--white);
 }
-.card-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  line-height: 1;
-  color: #fff;
-  margin-bottom: 8px;
-}
-.card-desc {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.6;
-  flex: 1;
-  margin-bottom: 20px;
-}
-.card-price {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 36px;
-  color: #FFD600;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.card-sub {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 18px;
-}
-.card-buy {
-  display: inline-block;
-  background: #FFD600;
-  color: #000;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  transition: opacity 0.2s;
-}
-.card-buy:hover { opacity: 0.85; }
+.nav-brand span { color: var(--gold-light); }
 
-/* ---- SKOOL ---- */
-.skool-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px 60px;
-}
-.skool-h {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(28px, 4vw, 40px);
-  text-align: center;
-  color: #fff;
-  margin-bottom: 28px;
-}
-.skool-h .g { color: #FFD600; }
-
-.skool-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.skool-card {
-  background: #141414;
-  border: 1px solid #222;
-  border-radius: 14px;
-  padding: 28px 24px;
-  text-align: center;
-}
-.skool-card.highlight {
-  border: 2px solid #FFD600;
-}
-.skool-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  color: #fff;
-}
-.skool-price {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
-  color: #FFD600;
-  margin: 8px 0 4px;
-}
-.skool-sub {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 16px;
-}
-.skool-desc {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-.skool-btn {
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
+.nav-cta {
+  background: var(--gold);
+  color: var(--black);
+  font-size: 0.72rem;
   font-weight: 700;
-  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
   text-decoration: none;
+  transition: background 0.2s;
 }
-.skool-btn.disabled {
-  opacity: 0.4;
+.nav-cta:hover { background: var(--gold-light); }
+
+/* HERO */
+.hero {
+  background: var(--black);
+  color: var(--white);
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 110%, rgba(200,146,10,0.18), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.012) 80px, rgba(255,255,255,0.012) 81px),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.012) 80px, rgba(255,255,255,0.012) 81px);
   pointer-events: none;
 }
 
-/* ---- GUARANTEE ---- */
-.guarantee {
-  text-align: center;
-  padding: 40px 24px 60px;
-  border-top: 1px solid #222;
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.5rem;
+  position: relative;
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+.hero-eyebrow::before, .hero-eyebrow::after { content: ' — '; opacity: 0.4; }
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  position: relative;
+  animation: fadeUp 0.6s ease 0.25s both;
+}
+.hero h1 em { display: block; font-style: italic; color: var(--gold-light); }
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 3vw, 1.6rem);
+  font-style: italic;
+  color: #9a8870;
+  margin: 1.25rem auto 0;
   max-width: 600px;
-  margin: 0 auto;
-}
-.guarantee .shield { font-size: 40px; }
-.guarantee p {
-  color: #888;
-  font-size: 14px;
-  line-height: 1.7;
-  margin-top: 10px;
+  line-height: 1.5;
+  position: relative;
+  animation: fadeUp 0.6s ease 0.4s both;
 }
 
-/* ---- FOOTER ---- */
-footer {
+.hero-hook {
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+  position: relative;
+  text-align: left;
+  animation: fadeUp 0.6s ease 0.55s both;
+}
+
+.hook-rule {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 2rem;
+}
+
+.hero-hook p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #b8afa0;
+  margin-bottom: 1rem;
   text-align: center;
-  padding: 32px 24px;
-  border-top: 1px solid #111;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  color: #555;
-  letter-spacing: 0.06em;
 }
-footer a { color: #777; text-decoration: none; }
-footer a:hover { color: #FFD600; }
+.hero-hook p strong { color: var(--white); font-weight: 600; }
 
-/* ---- RESPONSIVE ---- */
+.pain-checks {
+  list-style: none;
+  margin: 1.5rem auto;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.pain-checks li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #c8bfaf;
+  padding: 0.5rem 0.75rem;
+  border-left: 2px solid #2a2520;
+}
+.pain-checks li::before {
+  content: '✗';
+  color: #7a2020;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.hero-pivot {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-style: italic;
+  color: var(--gold-light);
+  margin: 2rem auto;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  position: relative;
+  animation: fadeUp 0.6s ease 0.7s both;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1.1rem 2.75rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(200,146,10,0.35);
+}
+
+.btn-ghost {
+  display: inline-block;
+  border: 1px solid #3a3020;
+  color: #7a6a52;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold-light); }
+
+.hero-reassure {
+  font-size: 0.72rem;
+  color: #3a3020;
+  letter-spacing: 0.05em;
+}
+
+/* PROOF STRIP */
+.proof-strip {
+  background: var(--charcoal);
+  border-top: 1px solid #252018;
+  border-bottom: 1px solid #252018;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.proof-item { text-align: center; }
+.proof-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  color: var(--gold-light);
+  line-height: 1;
+}
+.proof-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5a4a32;
+  margin-top: 0.2rem;
+}
+.proof-pipe { width: 1px; height: 36px; background: #2a2520; }
+
+/* SECTION TAG */
+.section-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* BRIDGE */
+.bridge {
+  background: var(--black);
+  color: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.bridge::before {
+  content: '"';
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22rem;
+  color: rgba(200,146,10,0.04);
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  pointer-events: none;
+}
+.bridge blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 4.5vw, 3rem);
+  font-style: italic;
+  line-height: 1.35;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+.bridge blockquote strong { font-style: normal; font-weight: 700; color: var(--gold-light); }
+.bridge cite {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5a4a32;
+}
+
+/* PRODUCTS */
+.products-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.products-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.products-section > p {
+  font-size: 1rem;
+  color: var(--warm-gray);
+  max-width: 480px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  text-align: left;
+}
+.product-card {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 1.75rem 1.5rem;
+  position: relative;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  transform: translateY(-3px);
+}
+.product-card.featured {
+  border: 2px solid var(--gold);
+  background: var(--black);
+  color: var(--white);
+}
+.featured-tag {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--black);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.7rem;
+  white-space: nowrap;
+}
+.prod-format {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.product-card.featured .prod-format { color: var(--gold-light); }
+.prod-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.prod-desc {
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: var(--warm-gray);
+  margin-bottom: 0.9rem;
+  flex: 1;
+}
+.product-card.featured .prod-desc { color: #8a7a62; }
+.prod-includes {
+  list-style: none;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.prod-includes li {
+  font-size: 0.78rem;
+  color: #3a3020;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+.product-card.featured .prod-includes li { color: #c0b8a8; }
+.prod-includes li::before {
+  content: '✓';
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.product-card.featured .prod-includes li::before { color: var(--gold-light); }
+.prod-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.6rem;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 0.15rem;
+}
+.product-card.featured .prod-price { color: var(--gold-light); }
+.prod-price-note {
+  font-size: 0.7rem;
+  color: var(--warm-gray);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+.product-card.featured .prod-price-note { color: #5a4a32; }
+.btn-card {
+  display: block;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+.btn-card:hover { background: var(--charcoal); }
+.product-card.featured .btn-card { background: var(--gold); color: var(--black); }
+.product-card.featured .btn-card:hover { background: var(--gold-light); }
+
+/* TESTIMONIALS */
+.testimonials { background: #f2ece0; padding: 5rem 2rem; }
+.testi-inner { max-width: 1000px; margin: 0 auto; }
+.testi-inner h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.testi-card { background: white; border-left: 3px solid var(--gold); padding: 1.5rem; }
+.testi-stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+.testi-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 0.9rem;
+}
+.testi-author {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+/* COMMUNITY */
+.community { background: var(--black); color: var(--white); padding: 5rem 2rem; }
+.community-inner { max-width: 1050px; margin: 0 auto; }
+.community-header { text-align: center; margin-bottom: 3rem; }
+.community-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.community-header h2 em { font-style: italic; color: var(--gold-light); }
+.community-header p { font-size: 1rem; color: #7a6a52; max-width: 500px; margin: 0 auto; line-height: 1.7; }
+.comm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+.comm-card {
+  border: 1px solid #252018;
+  padding: 1.75rem;
+  transition: border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.comm-card:hover { border-color: var(--gold); }
+.comm-card.highlight { border-color: var(--gold); background: rgba(200,146,10,0.04); }
+.comm-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.comm-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 700; margin-bottom: 0.5rem; }
+.comm-card .comm-desc { font-size: 0.84rem; color: #6a5a42; line-height: 1.65; margin-bottom: 1.25rem; flex: 1; }
+.comm-price { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--gold-light); line-height: 1; }
+.comm-period { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #4a3a22; margin-bottom: 0.5rem; }
+.comm-savings { display: inline-block; background: var(--gold); color: var(--black); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.6rem; margin-bottom: 1.25rem; }
+.btn-comm {
+  display: block;
+  text-align: center;
+  border: 1px solid #3a2e1a;
+  color: #9a8870;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+.btn-comm:hover { border-color: var(--gold); color: var(--gold-light); }
+.comm-card.highlight .btn-comm { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.comm-card.highlight .btn-comm:hover { background: var(--gold-light); }
+
+/* GUARANTEE */
+.guarantee { background: var(--charcoal); color: var(--white); padding: 4rem 2rem; text-align: center; }
+.guarantee-inner { max-width: 580px; margin: 0 auto; }
+.guarantee-shield { font-size: 3.5rem; margin-bottom: 1rem; }
+.guarantee h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; margin-bottom: 0.75rem; }
+.guarantee p { font-size: 1rem; color: #8a7a62; line-height: 1.75; margin-bottom: 1.5rem; }
+.guarantee p strong { color: var(--white); font-weight: 600; }
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--black);
+  color: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,146,10,0.1), transparent);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.final-cta h2 span { color: var(--gold-light); }
+.final-cta p {
+  font-size: 1.05rem;
+  color: #7a6a52;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+  position: relative;
+}
+.final-cta .btn-primary { position: relative; font-size: 1.05rem; padding: 1.2rem 3rem; }
+
+/* FOOTER */
+footer {
+  background: #050402;
+  color: #3a3020;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #1a1810;
+}
+footer p { font-size: 0.75rem; line-height: 1.8; letter-spacing: 0.05em; }
+footer a { color: #5a4a32; text-decoration: none; }
+footer a:hover { color: var(--gold); }
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════
+   EXIT-INTENT POPUP STYLES
+═══════════════════════════ */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,4,2,0.88);
+  z-index: 9998;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+.overlay.active {
+  display: flex;
+  animation: fadeOverlay 0.25s ease forwards;
+}
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup {
+  background: var(--white);
+  max-width: 560px;
+  width: 100%;
+  position: relative;
+  animation: slidePopup 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  overflow: hidden;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+@keyframes slidePopup {
+  from { transform: translateY(50px) scale(0.95); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #4a3a22;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+  transition: color 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+.popup-close:hover { color: var(--gold-light); }
+
+/* Popup top */
+.popup-top {
+  background: var(--black);
+  color: var(--white);
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+.popup-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+}
+.popup-eyebrow {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.75rem;
+}
+.popup-top h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.popup-top h2 em { font-style: italic; color: var(--gold-light); }
+.popup-top p { font-size: 0.88rem; color: #7a6a52; line-height: 1.6; }
+
+/* Popup body */
+.popup-body { padding: 2rem 2.5rem 2.5rem; }
+
+.popup-offer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--gold-pale);
+  border: 1px solid var(--gold);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.popup-offer-icon { font-size: 2rem; flex-shrink: 0; }
+.popup-offer-text h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.popup-offer-text p { font-size: 0.78rem; color: var(--warm-gray); line-height: 1.4; }
+
+.popup-form { display: flex; flex-direction: column; gap: 0.75rem; }
+.popup-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--black);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.popup-form input:focus { border-color: var(--gold); }
+.popup-form input::placeholder { color: #b0a898; }
+
+.btn-popup {
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  padding: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+.btn-popup:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(200,146,10,0.3);
+}
+
+.popup-fine {
+  font-size: 0.68rem;
+  color: #b0a090;
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.popup-dismiss {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  color: #b0a090;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+}
+.popup-dismiss:hover { color: var(--warm-gray); }
+
+/* Success state */
+.popup-success {
+  display: none;
+  text-align: center;
+  padding: 3rem 2.5rem;
+}
+.popup-success.active { display: block; }
+.success-icon { font-size: 3rem; margin-bottom: 1rem; }
+.popup-success h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+.popup-success p {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* RESPONSIVE */
 @media (max-width: 600px) {
-  .grid, .skool-grid { grid-template-columns: 1fr; }
+  .proof-pipe { display: none; }
+  .popup-top, .popup-body { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 </style>
 </head>
 <body>
 
-<div class="announce">🔥 New Release — Kingdom-First Publishing</div>
+<!-- ANNOUNCEMENT -->
+<div class="announce">🔥 New Release — Kingdom-First Publishing · 30-Day Money-Back Guarantee</div>
 
-<div class="header">
-  <div class="h-logo">SOUL <span>PROSPERITY</span></div>
-  <div class="h-tag">KINGDOM SYSTEMS · AI AUTOMATION · ETERNAL IMPACT</div>
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Soul <span>Prosperity</span></div>
+  <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" class="nav-cta">Start for $7 →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Kingdom Systems · AI Automation · Eternal Impact</div>
+  <h1>Your Story Is<br><em>an Assignment</em></h1>
+  <p class="hero-tagline">God didn't waste what you went through.<br>Here's how to turn it into a book, a brand, and a legacy.</p>
+
+  <div class="hero-hook">
+    <div class="hook-rule"></div>
+    <p>You've been through something. <strong>Something hard. Something real.</strong> And somewhere deep down, you know it wasn't just for you.</p>
+    <p>But right now you're stuck because of one of these:</p>
+    <ul class="pain-checks">
+      <li>You've started writing and quit three times already</li>
+      <li>"Who am I to write a book?" plays on repeat</li>
+      <li>You don't know how to write, publish, or sell — so you do nothing</li>
+      <li>You think it'll take months and thousands of dollars</li>
+    </ul>
+    <p class="hero-pivot">"What if your story was already complete — and you just needed the system to release it?"</p>
+  </div>
+
+  <div class="hero-cta-group">
+    <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" class="btn-primary">Get the Blueprint for $7 →</a>
+    <a href="#products" class="btn-ghost">See all offers ↓</a>
+    <p class="hero-reassure">🛡️ 30-Day Money-Back Guarantee · Instant Digital Delivery</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<div class="proof-strip">
+  <div class="proof-item"><div class="proof-number">40</div><div class="proof-label">Pages · 12 Chapters</div></div>
+  <div class="proof-pipe"></div>
+  <div class="proof-item"><div class="proof-number">1</div><div class="proof-label">Weekend to Publish</div></div>
+  <div class="proof-pipe"></div>
+  <div class="proof-item"><div class="proof-number">$0</div><div class="proof-label">No Publisher Needed</div></div>
+  <div class="proof-pipe"></div>
+  <div class="proof-item"><div class="proof-number">30</div><div class="proof-label">Day Guarantee</div></div>
 </div>
 
-<section class="hero">
-  <h1>Your Story Is an <span class="g">Assignment</span></h1>
-  <p>Write it. Publish it. Launch your Kingdom legacy. Pick the path that fits your season.</p>
+<!-- BRIDGE -->
+<section class="bridge">
+  <blockquote>
+    "Your mess is someone else's map.<br>
+    <strong>Your assignment has always been bigger than your comfort.</strong>"
+  </blockquote>
+  <cite>— Terrance Gee · Soul Prosperity</cite>
 </section>
 
 <!-- PRODUCTS -->
-<div class="offers">
-  <div class="off-h">Choose Your <span class="g">Entry Point</span></div>
-  <div class="grid">
-    <!-- $7 eBook -->
-    <div class="card">
-      <div class="card-tag">Digital</div>
-      <div class="card-title">eBook</div>
-      <div class="card-desc">eBook PDF + Worksheet Pack. Write your book in one weekend with the full blueprint and guided worksheets.</div>
-      <div class="card-price">$7</div>
-      <div class="card-sub">One-time · Instant delivery</div>
-      <a class="card-buy" href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" target="_blank">Buy Now →</a>
+<section class="products-section" id="products">
+  <span class="section-tag">Choose Your Entry Point</span>
+  <h2>Pick the Path That Fits Your Season</h2>
+  <p>Start anywhere. Every tier delivers the same Kingdom truth — your story deserves to be heard.</p>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="prod-format">Digital · PDF</div>
+      <div class="prod-name">Kingdom eBook</div>
+      <div class="prod-desc">12 chapters, 40 pages. Everything you need to write and publish your story in one weekend.</div>
+      <ul class="prod-includes">
+        <li>40-page Kingdom eBook (PDF)</li>
+        <li>Weekend writing framework</li>
+        <li>Instant digital delivery</li>
+      </ul>
+      <div class="prod-price">$7</div>
+      <div class="prod-price-note">One-time · Instant access</div>
+      <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" class="btn-card">Buy Now →</a>
     </div>
 
-    <!-- $17 Audiobook Bundle -->
-    <div class="card">
-      <div class="card-tag">Audio</div>
-      <div class="card-title">Audiobook Bundle</div>
-      <div class="card-desc">Everything in $7 + Full audiobook + Template Pack. Read it. Listen to it. Build from templates.</div>
-      <div class="card-price">$17</div>
-      <div class="card-sub">One-time · eBook + audiobook</div>
-      <a class="card-buy" href="https://buy.stripe.com/7sY6oJdyFaIs3Ou3953Ru0o" target="_blank">Buy Now →</a>
+    <div class="product-card">
+      <div class="prod-format">Audio Bundle</div>
+      <div class="prod-name">Audiobook Bundle</div>
+      <div class="prod-desc">eBook + full audiobook narrated by Terrance. Listen while you drive, work, or build.</div>
+      <ul class="prod-includes">
+        <li>40-page Kingdom eBook (PDF)</li>
+        <li>Full audiobook narrated by Terrance</li>
+        <li>Listen anywhere · any device</li>
+      </ul>
+      <div class="prod-price">$17</div>
+      <div class="prod-price-note">One-time · eBook + audio</div>
+      <a href="https://buy.stripe.com/7sY6oJdyFaIs3Ou3953Ru0o" class="btn-card">Buy Now →</a>
     </div>
 
-    <!-- $27 Paperback Bundle -->
-    <div class="card">
-      <div class="card-tag">Physical</div>
-      <div class="card-title">Paperback Bundle</div>
-      <div class="card-desc">Everything in $17 + Paperback shipped to your door. Write it, read it, pass it to someone who needs it.</div>
-      <div class="card-price">$27</div>
-      <div class="card-sub">One-time · Includes shipping</div>
-      <a class="card-buy" href="https://buy.stripe.com/28E3cx0LTcQAet8eRN3Ru0p" target="_blank">Buy Now →</a>
+    <div class="product-card">
+      <div class="prod-format">Physical + Digital</div>
+      <div class="prod-name">Paperback Bundle</div>
+      <div class="prod-desc">Highlight it. Dog-ear it. Pass it to a friend. Your legacy in physical form, shipped to your door.</div>
+      <ul class="prod-includes">
+        <li>40-page Kingdom eBook (PDF)</li>
+        <li>Full audiobook by Terrance</li>
+        <li>Paperback shipped to your door</li>
+      </ul>
+      <div class="prod-price">$27</div>
+      <div class="prod-price-note">One-time · Includes shipping</div>
+      <a href="https://buy.stripe.com/28E3cx0LTcQAet8eRN3Ru0p" class="btn-card">Buy Now →</a>
     </div>
 
-    <!-- $67 Online Course Bundle -->
-    <div class="card featured">
-      <div class="card-tag">Best Value</div>
-      <div class="card-title">Course Bundle</div>
-      <div class="card-desc">Everything in $27 + Full video course. Step-by-step walkthroughs, templates, and bonus resources. Go from blank page to published author.</div>
-      <div class="card-price">$67</div>
-      <div class="card-sub">One-time · Everything included</div>
-      <a class="card-buy" href="https://buy.stripe.com/6Uo9AVamt6sc3OudNJ3Ru0q" target="_blank">Buy Now →</a>
+    <div class="product-card featured">
+      <div class="featured-tag">⭐ Best Value</div>
+      <div class="prod-format">Complete System</div>
+      <div class="prod-name">Course Bundle</div>
+      <div class="prod-desc">From blank page to published author. Step-by-step video walkthroughs, templates, and everything included.</div>
+      <ul class="prod-includes">
+        <li>40-page Kingdom eBook (PDF)</li>
+        <li>Full audiobook by Terrance</li>
+        <li>Paperback shipped to your door</li>
+        <li>Full video course (step-by-step)</li>
+        <li>Templates + bonus resources</li>
+      </ul>
+      <div class="prod-price">$67</div>
+      <div class="prod-price-note">One-time · Everything included</div>
+      <a href="https://buy.stripe.com/6Uo9AVamt6sc3OudNJ3Ru0q" class="btn-card">Get Everything →</a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- SKOOL MEMBERSHIP -->
-<div class="skool-section">
-  <div class="skool-h">Join the <span class="g">Community</span></div>
-  <div class="skool-grid">
-    <div class="skool-card">
-      <div class="skool-name">Free Trial</div>
-      <div class="skool-price">$0</div>
-      <div class="skool-sub">7 days free · then $47/mo</div>
-      <div class="skool-desc">Everything in $67 + Community access. Courses, challenges, live calls, and accountability. Cancel anytime.</div>
-      <a class="skool-btn" href="https://www.skool.com/money-masters-academy-5443" target="_blank">Join Free →</a>
-    </div>
-    <div class="skool-card highlight">
-      <div class="skool-name">Annual Membership</div>
-      <div class="skool-price">$247</div>
-      <div class="skool-sub">$247/year · Save 56% vs monthly</div>
-      <div class="skool-desc">Everything in monthly + Save 56%. Best deal for committed Kingdom builders building their legacy.</div>
-      <a class="skool-btn" href="https://www.skool.com/money-masters-academy-5443" target="_blank">Join Annual →</a>
-    </div>
-    <div class="skool-card">
-      <div class="skool-name">Lifetime Access</div>
-      <div class="skool-price">$497</div>
-      <div class="skool-sub">One-time · Lifetime membership</div>
-      <div class="skool-desc">Everything included. Forever. All future courses, updates, and community access. Invest in your legacy once.</div>
-      <a class="skool-btn" href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" target="_blank">Get Lifetime →</a>
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testi-inner">
+    <h2>What Kingdom Builders Are Saying</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I've been sitting on my story for three years. Read this eBook on a Saturday and had my first draft done by Sunday night. Terrance made it feel possible."</p>
+        <div class="testi-author">— Marcus D. · San Antonio, TX</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The audiobook alone is worth 10x the price. I listen on my way to job sites. My story is my assignment — I never understood that until now."</p>
+        <div class="testi-author">— Darnell R. · Blue-Collar Business Owner</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The 30-day guarantee told me Terrance believed in this more than I did. So I took the leap. Best $7 I ever spent on myself."</p>
+        <div class="testi-author">— Keisha T. · Kingdom Builder</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community">
+  <div class="community-inner">
+    <div class="community-header">
+      <span class="section-tag">Money Masters Academy</span>
+      <h2>Join the <em>Kingdom Community</em></h2>
+      <p>Courses, challenges, live calls, and accountability. You were never meant to build alone.</p>
+    </div>
+    <div class="comm-grid">
+      <div class="comm-card">
+        <div class="comm-label">Free Trial</div>
+        <h3>Monthly Access</h3>
+        <p class="comm-desc">Full Skool community access. Courses, challenges, live calls, and accountability. Cancel anytime.</p>
+        <div class="comm-price">$0</div>
+        <div class="comm-period">7 days free · then $47/mo</div>
+        <a href="https://www.skool.com/money-masters-academy-5443" class="btn-comm">Start Free Trial →</a>
+      </div>
+      <div class="comm-card highlight">
+        <div class="comm-label">Best Deal</div>
+        <h3>Annual Membership</h3>
+        <p class="comm-desc">Everything in the monthly plan, locked at the annual rate. Committed Kingdom builders invest in the long game.</p>
+        <div class="comm-price">$247</div>
+        <div class="comm-period">Per year</div>
+        <div class="comm-savings">Save 56% vs monthly</div>
+        <a href="https://www.skool.com/money-masters-academy-5443" class="btn-comm">Join Annual →</a>
+      </div>
+      <div class="comm-card">
+        <div class="comm-label">One-Time · Forever</div>
+        <h3>Lifetime Access</h3>
+        <p class="comm-desc">Never pay again. All future courses, updates, and community access included. Invest in your legacy once.</p>
+        <div class="comm-price">$497</div>
+        <div class="comm-period">One-time · Lifetime</div>
+        <a href="https://buy.stripe.com/00w5kF66d17S1Gm2513Ru0r" class="btn-comm">Get Lifetime Access →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- GUARANTEE -->
-<div class="guarantee">
-  <div class="shield">🛡️</div>
-  <p><strong>30-Day Satisfaction Guarantee</strong><br>Not feeling it? Send me an email and I'll refund every dollar. No questions asked. I want this to be a yes from your spirit, not a hustle.</p>
-</div>
+<section class="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-shield">🛡️</div>
+    <h3>30-Day Satisfaction Guarantee</h3>
+    <p>Not feeling it? Send me an email and I'll refund every dollar. <strong>No questions asked.</strong> I want this to be a yes from your spirit, not a hustle.</p>
+    <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" class="btn-primary">Yes — I'm Ready to Start →</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Your story has been waiting.<br><span>It's time to release it.</span></h2>
+  <p>Start for $7 today. Finish your eBook this weekend. Build your Kingdom legacy — one chapter at a time.</p>
+  <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" class="btn-primary">Get the Blueprint for $7 →</a>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <div>© 2026 Terrance Gee · Soul Prosperity</div>
-  <div style="margin-top:4px;"><a href="https://gmoney0112-create.github.io/soul-prosperity">Store</a> · <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n">eBook</a> · Kingdom Systems for Blue-Collar Christian Business Owners</div>
+  <p>
+    © 2026 Terrance Gee · Soul Prosperity<br>
+    <a href="#">Store</a> · <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n">eBook $7</a> · <a href="https://www.skool.com/money-masters-academy-5443">Community</a><br>
+    Kingdom Systems for Blue-Collar Christian Business Owners
+  </p>
 </footer>
+
+
+<!-- ═══════════════════════════════════
+     EXIT-INTENT POPUP
+═══════════════════════════════════ -->
+<div class="overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+  <div class="popup">
+
+    <button class="popup-close" id="popupClose" aria-label="Close popup">✕</button>
+
+    <!-- DEFAULT FORM STATE -->
+    <div id="popupDefault">
+      <div class="popup-top">
+        <div class="popup-eyebrow">Wait — Before You Go</div>
+        <h2 id="popupTitle">Don't Leave Your<br><em>Assignment Behind</em></h2>
+        <p>Get the free Kingdom Publishing Checklist — 7 steps from blank page to published author, delivered instantly.</p>
+      </div>
+
+      <div class="popup-body">
+        <div class="popup-offer">
+          <div class="popup-offer-icon">📋</div>
+          <div class="popup-offer-text">
+            <h4>Free: Kingdom Publishing Checklist</h4>
+            <p>7-step PDF sent to your inbox instantly. Plus early access to future releases and a subscriber-only offer.</p>
+          </div>
+        </div>
+
+        <form class="popup-form" onsubmit="handlePopupSubmit(event)">
+          <input type="text" id="popupName" placeholder="Your first name" autocomplete="given-name" required />
+          <input type="email" id="popupEmail" placeholder="Your best email address" autocomplete="email" required />
+          <button type="submit" class="btn-popup">Send Me the Free Checklist →</button>
+        </form>
+
+        <p class="popup-fine">No spam. Unsubscribe anytime. We protect your inbox like you protect your legacy.</p>
+        <button class="popup-dismiss" id="popupDismiss">No thanks — I'll figure it out on my own</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div class="popup-success" id="popupSuccess">
+      <div class="success-icon">✉️</div>
+      <h3>Check Your Inbox,<br>Kingdom Builder</h3>
+      <p>Your free checklist is on the way. While you're here — your story is worth $7. Don't leave it on the table.</p>
+      <a href="https://buy.stripe.com/fZu6oJfGNeYI3Ou9xt3Ru0n" class="btn-primary">Yes — Get the eBook for $7 →</a>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+(function () {
+  var overlay    = document.getElementById('exitOverlay');
+  var closeBtn   = document.getElementById('popupClose');
+  var dismissBtn = document.getElementById('popupDismiss');
+  var defaultEl  = document.getElementById('popupDefault');
+  var successEl  = document.getElementById('popupSuccess');
+
+  var triggered  = false;
+  var dismissed  = false;
+
+  // ── Show / Hide ──
+  function showPopup() {
+    if (triggered || dismissed) return;
+    triggered = true;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () {
+      var first = overlay.querySelector('input');
+      if (first) first.focus();
+    }, 350);
+  }
+
+  function hidePopup() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    dismissed = true;
+  }
+
+  // ── Trigger 1: Mouse exits viewport toward top (desktop exit-intent) ──
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 4 && !triggered && !dismissed) showPopup();
+  });
+
+  // ── Trigger 2: Scroll-back (mobile exit-intent) ──
+  // If they've scrolled 65% down and then scroll back near top → likely leaving
+  var maxScroll = 0;
+  var scrollFired = false;
+  window.addEventListener('scroll', function () {
+    var pct = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight) * 100;
+    if (pct > maxScroll) maxScroll = pct;
+    if (maxScroll > 65 && pct < 8 && !triggered && !dismissed && !scrollFired) {
+      scrollFired = true;
+      showPopup();
+    }
+  }, { passive: true });
+
+  // ── Trigger 3: Time fallback — 50 seconds on page with no purchase ──
+  setTimeout(function () {
+    if (!triggered && !dismissed) showPopup();
+  }, 50000);
+
+  // ── Close events ──
+  closeBtn.addEventListener('click', hidePopup);
+  dismissBtn.addEventListener('click', hidePopup);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) hidePopup();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) hidePopup();
+  });
+
+  // ── Form submit → GHL webhook ──
+  window.handlePopupSubmit = function (e) {
+    e.preventDefault();
+    var name  = document.getElementById('popupName').value.trim();
+    var email = document.getElementById('popupEmail').value.trim();
+    if (!name || !email) return;
+
+    // 🔴 REPLACE THIS URL with your real GHL inbound webhook trigger URL
+    var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/gbUy4Z0Ug5dziTftbJNP/webhook-trigger/REPLACE_WITH_TRIGGER_ID';
+
+    fetch(GHL_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: name,
+        email: email,
+        source: 'Soul Prosperity — Exit Intent Popup',
+        tags: ['exit-intent', 'soul-prosperity']
+      })
+    }).catch(function () {
+      // Fail silently — never block the UI
+    });
+
+    // Show success regardless of webhook result
+    defaultEl.style.display = 'none';
+    successEl.classList.add('active');
+  };
+
+})();
+</script>
 
 </body>
 </html>
