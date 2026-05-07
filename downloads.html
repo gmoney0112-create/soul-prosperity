@@ -3,7 +3,7 @@
 <div class="prods">
   <div style="background:#111;border:1px solid #FFD600;border-radius:12px;padding:20px 24px;margin-bottom:24px;">
     <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.15em;color:#FFD600;text-transform:uppercase;margin-bottom:4px;">Your Bundle</div>
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#fff;" id="bundle-heading">Order Confirmed ✅</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:#fff;" id="bundle-heading">Order Confirmed &#x2705;</div>
   </div>
 
   <!-- FREE - Always visible -->
@@ -34,7 +34,7 @@
     <a class="btn" href="https://drive.google.com/file/d/1UycQ30zbG0bLQ2FsKzMY0R2yRAuKdFUQ/view" target="_blank">Download</a>
   </div>
 
-  <!-- $17 Audiobook tier (adds to $7) -->
+  <!-- $17 Audiobook tier -->
   <div class="prod-card tier-17" data-tier="17" style="display:none;">
     <div class="info">
       <div class="tag">$17 · Included in Your Bundle</div>
@@ -52,7 +52,7 @@
     <a class="btn" href="https://drive.google.com/file/d/13hNmbHrNhGHZsbUA2mRXtVL9bNu_4jin/view" target="_blank">Download</a>
   </div>
 
-  <!-- $27 Paperback tier (adds to $17) -->
+  <!-- $27 Paperback tier -->
   <div class="prod-card tier-27" data-tier="27" style="display:none;">
     <div class="info">
       <div class="tag">$27 · Included in Your Bundle</div>
@@ -62,12 +62,12 @@
     <a class="btn plain" href="mailto:support@heavenlyarborcare.com?subject=Paperback%20Shipping%20Address">Confirm Address →</a>
   </div>
 
-  <!-- $67 Course tier (adds to $27) -->
+  <!-- $67 Course tier -->
   <div class="prod-card tier-67" data-tier="67" style="display:none;">
     <div class="info">
       <div class="tag">$67 · Included in Your Bundle</div>
       <div class="name">Online Course — Modern eBook Blueprint</div>
-      <div class="desc">Full video course · Step-by-step walkthroughs · Templates & resources</div>
+      <div class="desc">Full video course · Step-by-step walkthroughs · Templates &amp; resources</div>
     </div>
     <a class="btn" href="https://app.studyraid.com/en/courses/77676/modern-ebook-blueprint-from-vision-to-viral-legacy" target="_blank">Start Course</a>
   </div>
@@ -108,6 +108,16 @@ src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>You're In — Soul Prosperity</title>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gmoney0112-create.github.io/soul-prosperity/downloads.html">
+<meta property="og:title" content="You're In — Soul Prosperity">
+<meta property="og:description" content="Your order is confirmed. Download your Kingdom resources and start your publishing journey today.">
+<meta property="og:image" content="https://gmoney0112-create.github.io/soul-prosperity/assets/soul-prosperity-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gmoney0112-create.github.io/soul-prosperity/assets/soul-prosperity-og.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
 /* Force all tier cards hidden by default until JS loads */
@@ -373,7 +383,6 @@ footer {
   };
   var hd = document.getElementById('bundle-heading');
   if (hd) hd.textContent = names[h] || 'Order Confirmed';
-  
 })();
 </script>
 </body>
