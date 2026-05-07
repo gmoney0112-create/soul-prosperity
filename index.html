@@ -1,9 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Story Is an Assignment — Soul Prosperity</title>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gmoney0112-create.github.io/soul-prosperity/">
+<meta property="og:title" content="Your Story Is an Assignment — Soul Prosperity">
+<meta property="og:description" content="God didn't waste what you went through. Turn your story into a book, a brand, and a Kingdom legacy. Start for $7 today — 30-day guarantee.">
+<meta property="og:image" content="https://gmoney0112-create.github.io/soul-prosperity/assets/soul-prosperity-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your Story Is an Assignment — Soul Prosperity">
+<meta name="twitter:description" content="God didn't waste what you went through. Turn your story into a book, a brand, and a legacy. Start for $7.">
+<meta name="twitter:image" content="https://gmoney0112-create.github.io/soul-prosperity/assets/soul-prosperity-og.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -177,7 +189,7 @@ nav {
   border-left: 2px solid #2a2520;
 }
 .pain-checks li::before {
-  content: '✗';
+  content: '\2717';
   color: #7a2020;
   font-weight: 700;
   flex-shrink: 0;
@@ -292,7 +304,7 @@ nav {
   overflow: hidden;
 }
 .bridge::before {
-  content: '"';
+  content: '\201C';
   position: absolute;
   font-family: 'Cormorant Garamond', serif;
   font-size: 22rem;
@@ -422,7 +434,7 @@ nav {
 }
 .product-card.featured .prod-includes li { color: #c0b8a8; }
 .prod-includes li::before {
-  content: '✓';
+  content: '\2713';
   color: var(--green);
   font-weight: 700;
   font-size: 0.72rem;
@@ -599,9 +611,7 @@ footer a:hover { color: var(--gold); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ═══════════════════════════
-   EXIT-INTENT POPUP STYLES
-═══════════════════════════ */
+/* EXIT-INTENT POPUP */
 .overlay {
   position: fixed;
   inset: 0;
@@ -613,15 +623,8 @@ footer a:hover { color: var(--gold); }
   padding: 1rem;
   backdrop-filter: blur(5px);
 }
-.overlay.active {
-  display: flex;
-  animation: fadeOverlay 0.25s ease forwards;
-}
-@keyframes fadeOverlay {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
+.overlay.active { display: flex; animation: fadeOverlay 0.25s ease forwards; }
+@keyframes fadeOverlay { from { opacity: 0; } to { opacity: 1; } }
 .popup {
   background: var(--white);
   max-width: 560px;
@@ -636,158 +639,33 @@ footer a:hover { color: var(--gold); }
   from { transform: translateY(50px) scale(0.95); opacity: 0; }
   to { transform: translateY(0) scale(1); opacity: 1; }
 }
-
-.popup-close {
-  position: absolute;
-  top: 0.85rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: #4a3a22;
-  font-size: 1.4rem;
-  cursor: pointer;
-  line-height: 1;
-  z-index: 10;
-  transition: color 0.15s;
-  font-family: 'DM Sans', sans-serif;
-}
+.popup-close { position: absolute; top: 0.85rem; right: 1rem; background: none; border: none; color: #4a3a22; font-size: 1.4rem; cursor: pointer; line-height: 1; z-index: 10; transition: color 0.15s; font-family: 'DM Sans', sans-serif; }
 .popup-close:hover { color: var(--gold-light); }
-
-/* Popup top */
-.popup-top {
-  background: var(--black);
-  color: var(--white);
-  padding: 2.5rem 2.5rem 2rem;
-  text-align: center;
-  position: relative;
-}
-.popup-top::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-}
-.popup-eyebrow {
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 0.75rem;
-}
-.popup-top h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.6rem, 5vw, 2.4rem);
-  font-weight: 700;
-  line-height: 1.15;
-  margin-bottom: 0.6rem;
-}
+.popup-top { background: var(--black); color: var(--white); padding: 2.5rem 2.5rem 2rem; text-align: center; position: relative; }
+.popup-top::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+.popup-eyebrow { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.75rem; }
+.popup-top h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.6rem; }
 .popup-top h2 em { font-style: italic; color: var(--gold-light); }
 .popup-top p { font-size: 0.88rem; color: #7a6a52; line-height: 1.6; }
-
-/* Popup body */
 .popup-body { padding: 2rem 2.5rem 2.5rem; }
-
-.popup-offer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: var(--gold-pale);
-  border: 1px solid var(--gold);
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
-}
+.popup-offer { display: flex; align-items: center; gap: 1rem; background: var(--gold-pale); border: 1px solid var(--gold); padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
 .popup-offer-icon { font-size: 2rem; flex-shrink: 0; }
-.popup-offer-text h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.2rem;
-}
+.popup-offer-text h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.2rem; }
 .popup-offer-text p { font-size: 0.78rem; color: var(--warm-gray); line-height: 1.4; }
-
 .popup-form { display: flex; flex-direction: column; gap: 0.75rem; }
-.popup-form input {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border: 1.5px solid var(--border);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  color: var(--black);
-  background: white;
-  outline: none;
-  transition: border-color 0.2s;
-}
+.popup-form input { width: 100%; padding: 0.85rem 1rem; border: 1.5px solid var(--border); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--black); background: white; outline: none; transition: border-color 0.2s; }
 .popup-form input:focus { border-color: var(--gold); }
 .popup-form input::placeholder { color: #b0a898; }
-
-.btn-popup {
-  background: var(--gold);
-  color: var(--black);
-  border: none;
-  padding: 1rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.2s;
-  width: 100%;
-}
-.btn-popup:hover {
-  background: var(--gold-light);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(200,146,10,0.3);
-}
-
-.popup-fine {
-  font-size: 0.68rem;
-  color: #b0a090;
-  text-align: center;
-  margin-top: 0.5rem;
-  letter-spacing: 0.03em;
-}
-
-.popup-dismiss {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.72rem;
-  color: #b0a090;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.15s;
-  background: none;
-  border: none;
-  font-family: 'DM Sans', sans-serif;
-  width: 100%;
-}
+.btn-popup { background: var(--gold); color: var(--black); border: none; padding: 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; width: 100%; }
+.btn-popup:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,146,10,0.3); }
+.popup-fine { font-size: 0.68rem; color: #b0a090; text-align: center; margin-top: 0.5rem; letter-spacing: 0.03em; }
+.popup-dismiss { display: block; text-align: center; margin-top: 1rem; font-size: 0.72rem; color: #b0a090; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; transition: color 0.15s; background: none; border: none; font-family: 'DM Sans', sans-serif; width: 100%; }
 .popup-dismiss:hover { color: var(--warm-gray); }
-
-/* Success state */
-.popup-success {
-  display: none;
-  text-align: center;
-  padding: 3rem 2.5rem;
-}
+.popup-success { display: none; text-align: center; padding: 3rem 2.5rem; }
 .popup-success.active { display: block; }
 .success-icon { font-size: 3rem; margin-bottom: 1rem; }
-.popup-success h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  font-style: italic;
-  margin-bottom: 0.75rem;
-}
-.popup-success p {
-  font-size: 0.9rem;
-  color: var(--warm-gray);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
+.popup-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; font-style: italic; margin-bottom: 0.75rem; }
+.popup-success p { font-size: 0.9rem; color: var(--warm-gray); line-height: 1.7; margin-bottom: 1.5rem; }
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
@@ -1010,15 +888,12 @@ footer a:hover { color: var(--gold); }
 </footer>
 
 
-<!-- ═══════════════════════════════════
-     EXIT-INTENT POPUP
-═══════════════════════════════════ -->
+<!-- EXIT-INTENT POPUP -->
 <div class="overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
   <div class="popup">
 
-    <button class="popup-close" id="popupClose" aria-label="Close popup">✕</button>
+    <button class="popup-close" id="popupClose" aria-label="Close popup">&#x2715;</button>
 
-    <!-- DEFAULT FORM STATE -->
     <div id="popupDefault">
       <div class="popup-top">
         <div class="popup-eyebrow">Wait — Before You Go</div>
@@ -1046,7 +921,6 @@ footer a:hover { color: var(--gold); }
       </div>
     </div>
 
-    <!-- SUCCESS STATE -->
     <div class="popup-success" id="popupSuccess">
       <div class="success-icon">✉️</div>
       <h3>Check Your Inbox,<br>Kingdom Builder</h3>
@@ -1065,11 +939,9 @@ footer a:hover { color: var(--gold); }
   var dismissBtn = document.getElementById('popupDismiss');
   var defaultEl  = document.getElementById('popupDefault');
   var successEl  = document.getElementById('popupSuccess');
-
   var triggered  = false;
   var dismissed  = false;
 
-  // ── Show / Hide ──
   function showPopup() {
     if (triggered || dismissed) return;
     triggered = true;
@@ -1087,13 +959,10 @@ footer a:hover { color: var(--gold); }
     dismissed = true;
   }
 
-  // ── Trigger 1: Mouse exits viewport toward top (desktop exit-intent) ──
   document.addEventListener('mouseleave', function (e) {
     if (e.clientY <= 4 && !triggered && !dismissed) showPopup();
   });
 
-  // ── Trigger 2: Scroll-back (mobile exit-intent) ──
-  // If they've scrolled 65% down and then scroll back near top → likely leaving
   var maxScroll = 0;
   var scrollFired = false;
   window.addEventListener('scroll', function () {
@@ -1105,12 +974,10 @@ footer a:hover { color: var(--gold); }
     }
   }, { passive: true });
 
-  // ── Trigger 3: Time fallback — 50 seconds on page with no purchase ──
   setTimeout(function () {
     if (!triggered && !dismissed) showPopup();
   }, 50000);
 
-  // ── Close events ──
   closeBtn.addEventListener('click', hidePopup);
   dismissBtn.addEventListener('click', hidePopup);
   overlay.addEventListener('click', function (e) {
@@ -1120,7 +987,6 @@ footer a:hover { color: var(--gold); }
     if (e.key === 'Escape' && overlay.classList.contains('active')) hidePopup();
   });
 
-  // ── Form submit → GHL webhook ──
   window.handlePopupSubmit = function (e) {
     e.preventDefault();
     var name  = document.getElementById('popupName').value.trim();
@@ -1138,11 +1004,8 @@ footer a:hover { color: var(--gold); }
         source: 'Soul Prosperity — Exit Intent Popup',
         tags: ['exit-intent', 'soul-prosperity']
       })
-    }).catch(function () {
-      // Fail silently — never block the UI
-    });
+    }).catch(function () {});
 
-    // Show success regardless of webhook result
     defaultEl.style.display = 'none';
     successEl.classList.add('active');
   };
@@ -1154,4 +1017,3 @@ footer a:hover { color: var(--gold); }
 
 </body>
 </html>
-
