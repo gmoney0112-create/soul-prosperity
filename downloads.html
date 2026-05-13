@@ -59,7 +59,7 @@
       <div class="name">Paperback Guide</div>
       <div class="desc">Physical copy shipped to your door</div>
     </div>
-    <a class="btn plain" href="mailto:support@heavenlyarborcare.com?subject=Paperback%20Shipping%20Address">Confirm Address →</a>
+    <a class="btn plain" href="mailto:support@inspirebuildmotivate.com?subject=Paperback%20Shipping%20Address">Confirm Address →</a>
   </div>
 
   <!-- $67 Course tier (adds to $27) -->
@@ -72,6 +72,15 @@
     <a class="btn" href="https://app.studyraid.com/en/courses/77676/modern-ebook-blueprint-from-vision-to-viral-legacy" target="_blank">Start Course</a>
   </div>
 
+    <!-- AI Writing Toolkit tier -->
+  <div class="prod-card tier-97" data-tier="tier-97" style="display:none;">
+    <div class="info">
+      <div class="tag">$97 &middot; AI Writing Toolkit</div>
+      <div class="name">AI Writing Toolkit</div>
+      <div class="desc">Prompts &middot; Templates &middot; Writing frameworks &amp; resources</div>
+    </div>
+    <a class="btn" href="https://inspirebuildmotivate.com/ai-writing-toolkit" target="_blank">Access AI Writing Toolkit</a>
+  </div>
   <!-- Skool / Membership tiers -->
   <div class="prod-card tier-skool" data-tier="membership" style="display:none;">
     <div class="info">
@@ -296,7 +305,7 @@ footer {
       <div class="name">Paperback Bundle</div>
       <div class="desc">eBook + audiobook + paperback (shipped separately)</div>
     </div>
-    <a class="btn plain" href="mailto:support@heavenlyarborcare.com?subject=Paperback%20Shipping%20Address">Confirm Address →</a>
+    <a class="btn plain" href="mailto:support@inspirebuildmotivate.com?subject=Paperback%20Shipping%20Address">Confirm Address →</a>
   </div>
 
   <div class="prod-card">
@@ -341,7 +350,8 @@ footer {
 </div>
 
 <footer>
-  © 2026 Terrance Gee · Soul Prosperity · Questions? support@heavenlyarborcare.com
+  © 2026 Terrance Gee · Soul Prosperity · Questions? support@inspirebuildmotivate.com
+    · Follow: TikTok @alwaysbeenblessed3 · IG @terrance.gee.505
 </footer>
 
 <script>
@@ -354,6 +364,7 @@ footer {
     '27': ['tier-7', 'tier-17', 'tier-27'],
     '67': ['tier-7', 'tier-17', 'tier-27', 'tier-67'],
     'membership': ['tier-7', 'tier-17', 'tier-27', 'tier-67', 'tier-skool']
+        '97': ['tier-7', 'tier-17', 'tier-27', 'tier-67', 'tier-97'],
   };
   var show = tiers[h] || tiers['7'];
   document.querySelectorAll('[data-tier]').forEach(function(el){
@@ -369,7 +380,8 @@ footer {
     '17': 'Audiobook Bundle',
     '27': 'Paperback Bundle',
     '67': 'Course Bundle',
-    'membership': 'Membership Bundle'
+    'membership': 'Membership Bundle',
+        '97': 'AI Writing Toolkit'
   };
   var hd = document.getElementById('bundle-heading');
   if (hd) hd.textContent = names[h] || 'Order Confirmed';
